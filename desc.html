@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de descuentos</title>
+</head>
+<body>
+    <header>
+        <h1>Programa para calcular los descuentos de los productos que usted desee</h1>
+    </header>
+    <main>
+        <section class="program">
+            <h2>Ingrese el precio de producto sin descuento</h2>
+            <form action="" class="caja">
+                <label for="precioOriginal" >Precio</label>
+                <input type="number" id="precioOriginal" />
+            </form>
+            <h2>Ingrese el descuento</h2>
+            <form action="" class="caja" >
+                <label for="descuento" >Descuento</label>
+                <input type="number" id="descuento" />
+            </form>
+            <br>
+            <button type="button" onclick="calcularDescuento()">Calcular</button>
+        </section>
+        <p id="ahorro"></p> 
+        <p id="precioFinal"></p>
+    </main>
+
+    <script src="desc.js"></script>
+</body>
+</html>
