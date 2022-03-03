@@ -30,36 +30,37 @@ let notaMate = document.getElementById("matematica");
 let notaProgra = document.getElementById("programacion");
 let notaIngles = document.getElementById("Ingles");
 let resultado = document.getElementById("resultado");
+let boton = document.getElementById("boton");
+boton.addEventListener("click", calcular);
 
 
-document.addEventListener("click",calcular);
 
 function calcular (){
 
     let notasValor = [
         {
             materia:"Matematica",
-            nota:9,
+            nota:notaMate.value,
             valor: 4
         },
         {
             materia:"Programacion",
-            nota:8,
+            nota:notaProgra.value,
             valor: 7
         },
         {
             materia:"Ingles",
-            nota:6,
+            nota:notaIngles.value,
             valor: 6
         }
     ]
     
     let multiNotaValor = notasValor.map(function(objeto){
         return objeto.nota * objeto.valor
-    })
-    let suma1 = multiNotaValor.reduce(function(a,b){return a+b});
-    let sumaValores =notasValor.valor.reduce(function(a,b){return a+b});
-    console.log(sumaValores)
+    }).reduce(function(a,b){return a+b});
+    let sumaValores = notasValor.map(function(object){return object.valor}).reduce(function(a,b){return a+b});
+    let resultado = multiNotaValor / sumaValores;
+    console.log(resultado); 
     
 
 }
