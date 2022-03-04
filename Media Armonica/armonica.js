@@ -23,5 +23,5 @@ let divVelocidades = object.map(function(vel){
     return 1/vel.velocidad}).reduce(function(a,b){return a+b})
 
 let total = cantidadDatos/divVelocidades
-console.log(total)
+console.log(divVelocidades)
 
