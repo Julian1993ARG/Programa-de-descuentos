@@ -55,12 +55,16 @@ function calcular (){
         }
     ]
     
+    //Primero recorri todo el objeto con map y ejecute la multiplicacion, luego cuando termine 
+    //le aplique un reduce asi sume todos lo parametros resultantes
     let multiNotaValor = notasValor.map(function(objeto){
         return objeto.nota * objeto.valor
     }).reduce(function(a,b){return a+b});
+    //
+    //recorri el objeto y obtuve los valores de las materias en un nuevo objeto y luego le aplique
+    //reduce para que se sumen
     let sumaValores = notasValor.map(function(object){return object.valor}).reduce(function(a,b){return a+b});
-    let resultado = multiNotaValor / sumaValores;
-    console.log(resultado); 
-    
 
+    let total = multiNotaValor / sumaValores; 
+    resultado.innerHTML = "Su promedio es de " + total.toFixed(1);
 }
