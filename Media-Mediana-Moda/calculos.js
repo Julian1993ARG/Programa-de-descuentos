@@ -26,16 +26,18 @@ function moda(dato){
 
 }
 
-let notaMate = document.getElementById("matematica");
-let notaProgra = document.getElementById("programacion");
-let notaIngles = document.getElementById("Ingles");
-let resultado = document.getElementById("resultado");
 let boton = document.getElementById("boton");
 boton.addEventListener("click", calcular);
 
 
 
 function calcular (){
+
+    let notaMate = document.getElementById("matematica");
+    let notaProgra = document.getElementById("programacion");
+    let notaIngles = document.getElementById("Ingles");
+    let resultado = document.getElementById("resultado");
+    
 
     let notasValor = [
         {
