@@ -83,12 +83,15 @@ colombia.push({
 
 
 let salarios = colombia.map(object => object.salary).sort((a,b) => a-b);
-let salariosMedia = salarios.reduce((init,acu) => init+acu) / salarios.length;
+let sumasalarios = salarios.reduce((init,acu) => init+acu);
+let salariosMedia = sumasalarios / salarios.length;
 
 let mitadObject = parseInt(salarios.length /2);
 let salariosMediana = 0;
-(salarios.length % 2 == !0) ? salariosMediana = salarios[mitadObject] : 
-  salariosMediana = (salarios[mitadObject - 1] + salarios[mitadObject])/2 ;
+(salarios.length % 2 == !0) ? salariosMediana = salarios[mitadObject] : salariosMediana = (salarios[mitadObject - 1] + salarios[mitadObject])/2 ;
+
+let el10Porciento = sumasalarios * 0.1;
+let mejoresSueldos = salarios.filter(dato => dato.salary >= el10Porciento)
 
 
-console.log(salariosMediana," ", salariosMedia );
+console.log(mejoresSueldos);
