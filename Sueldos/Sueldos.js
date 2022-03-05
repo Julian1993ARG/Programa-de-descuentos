@@ -88,10 +88,12 @@ let salariosMedia = sumasalarios / salarios.length;
 
 let mitadObject = parseInt(salarios.length /2);
 let salariosMediana = 0;
-(salarios.length % 2 == !0) ? salariosMediana = salarios[mitadObject] : salariosMediana = (salarios[mitadObject - 1] + salarios[mitadObject])/2 ;
+salarios.length % 2 == !0 ? salariosMediana = salarios[mitadObject] : salariosMediana = (salarios[mitadObject - 1] + salarios[mitadObject])/2 ;
 
-let el10Porciento = sumasalarios * 0.1;
-let mejoresSueldos = salarios.filter(dato => dato.salary >= el10Porciento)
+let spliceDesde = salarios.length * 0.9;
+let spliceHasta = salarios.length * 0.1;
 
+let salario2 = salarios.slice();
+let el10Porciento = salario2.splice(spliceDesde,spliceHasta);
 
-console.log(mejoresSueldos);
+console.log(el10Porciento);
