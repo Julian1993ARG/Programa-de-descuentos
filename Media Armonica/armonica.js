@@ -17,7 +17,11 @@ let object = [
     }
 ]
 
-function calcularMediaArmonica(object){
-    let cantidadDatos = 4;
-    
-}
+
+let cantidadDatos = 4;
+let divVelocidades = object.map(function(vel){
+    return 1/vel.velocidad}).reduce(function(a,b){return a+b})
+
+let total = cantidadDatos/divVelocidades
+console.log(divVelocidades)
+
